@@ -1,5 +1,4 @@
-﻿# add a comment, test the git
-Add-type -assembly "Microsoft.Office.Interop.Outlook" | out-null 
+﻿Add-type -assembly "Microsoft.Office.Interop.Outlook" | out-null 
 $outlook = new-object -comobject outlook.application 
 $namespace = $outlook.GetNameSpace("MAPI") 
 $olFolders = "Microsoft.Office.Interop.Outlook.olDefaultFolders" -as [type] 
