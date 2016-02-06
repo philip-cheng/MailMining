@@ -15,11 +15,11 @@ $allSentMails = $sendFolder.items
 $last7daysEmails=$allSentMails | ?{$_.senton -lt $today -and $_.senton -gt $today.AddDays(-7)}
 
 #total email amount sent this month
-function get-allMailCount($mails){
+function Get-MailsCount($mails){
     $mails.Length
 }
 
-function get-AllMailLength($mails){
+function Get-MailsSize($mails){
     $mails | % {$totalLength+=[math]::Round(($_.size/1MB),2)}
 }
 
